@@ -1,0 +1,39 @@
+{
+    "id": "ubuntu-base",
+    "version": "1.0.0",
+    "name": "Ubuntu Base (ubuntu-base)",
+    "description": "Base tools and configuration to enable usage as dev container.",
+    "options": {
+        "powershell_version": {
+            "type": "string",
+            "default": "7.5.1",
+            "description": "Define PowerShell version which shall be installed"
+        },
+        "group_name": {
+            "type": "string",
+            "default": "container_group"
+        },
+        "group_id": {
+            "type": "string",
+            "default": "1000"
+        },
+        "user_name": {
+            "type": "string",
+            "default": "container_user"
+        },
+        "user_id": {
+            "type": "string",
+            "default": "1000"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.powershell"
+            ]
+        }
+    },
+    "securityOpt": [
+        "label=disable"
+    ]
+}

@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+	"name": "Ubuntu",
+	"image": "ubuntu:24.04",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/container_user/workspace,type=bind,consistency=cached",
+	"workspaceFolder": "/home/container_user/workspace",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		// "./docker-outside-of-docker": {}
+		"./ubuntu-base": {}
+	},
+	"remoteEnv": {
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"davidanson.vscode-markdownlint"
+			]
+		}
+	},
+	"mounts": [
+		"source=${localEnv:HOME}/.gitconfig,target=/home/container_user/.gitconfig,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.ssh,target=/home/container_user/.ssh,type=bind,readonly"
+	],
+	// Ensure correct user for docker group when installing feature docker-outside-of-docker
+	"remoteUser": "container_user"
+}
