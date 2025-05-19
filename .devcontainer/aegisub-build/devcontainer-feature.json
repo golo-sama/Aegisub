@@ -1,0 +1,16 @@
+{
+    "id": "aegisub-build",
+    "version": "1.0.0",
+    "name": "Aegisub Build Toolchain (aegisub-build)",
+    "description": "Toolchain to build Aegisub for Linux.",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools"
+            ]
+        }
+    },
+    "securityOpt": [
+        "label=disable"
+    ]
+}

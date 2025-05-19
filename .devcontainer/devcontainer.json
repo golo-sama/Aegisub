@@ -6,7 +6,8 @@
 	"workspaceFolder": "/home/container_user/workspace",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		// "./docker-outside-of-docker": {}
+		"./aegisub-build": {},
+		// "./docker-outside-of-docker": {},
 		"./ubuntu-base": {}
 	},
 	"remoteEnv": {
@@ -16,7 +17,6 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-vscode.cpptools",
 				"davidanson.vscode-markdownlint"
 			]
 		}
